@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Shows-Antonio_Bukovac</string>
+    <string name="review_average_text">%d REVIEWS,  %.2f AVERAGE</string>
+    <string name="label_shows_text">Shows</string>
+    <string name="label_no_shows">Your shows are not showing.Get it?</string>
+    <string name="label_write_review">Write a review</string>
+    <string name="hint_review_comment">Comment</string>
+    <string name="button_submit_review">Submit</string>
+    <string name="label_login_title">Shows</string>
+    <string name="label_login_text">Login</string>
+    <string name="label_login_description">In order to continue please log in</string>
+    <string name="hint_email">E-mail</string>
+    <string name="hint_password">Password</string>
+    <string name="button_login">Login</string>
+    <string name="label_reviews_text">Reviews</string>
+    <string name="label_no_reviews">No reviews yet.</string>
+    <string name="button_write_review">Write a review</string>
+    <string name="checkbox_remember_me">Remember me</string>
+    <string name="button_change_profile_photo">Change profile photo</string>
+    <string name="button_logout">Logout</string>
+    <string name="profile_picture_description">Profile picture</string>
+    <string name="content_desc_profile_icon">Profile icon</string>
+    <string name="no_permissions">Please check you permissions in Settings</string>
+    <string name="settings">Settings</string>
+    <string name="profile_button_description">Profile button</string>
+    <string name="show_poster_description">Show poster</string>
+    <string name="label_register">Register</string>
+    <string name="hint_repeat_password">Repeat password</string>
+    <string name="toast_unsuccessful_login">Unsuccessful login, try again!</string>
+    <string name="toast_registration_failed">Registration failed!</string>
+    <string name="label_registration_successful">Registration successful!</string>
+</resources>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.shows_antonio_bukovac.SplashFragment"
+        tools:layout="@layout/fragment_splash">
+
+        <action
+            android:id="@+id/splash_to_login"
+            app:destination="@id/loginFragment"/>
+        <action
+            android:id="@+id/splash_to_shows"
+            app:destination="@id/showsFragment"/>
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.shows_antonio_bukovac.LoginFragment"
+        tools:layout="@layout/fragment_login">
+
+
+        <action
+            android:id="@+id/action_login_to_shows"
+            app:destination="@id/showsFragment" />
+
+        <action
+            android:id="@+id/login_to_registration"
+            app:destination="@id/registerFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.shows_antonio_bukovac.RegisterFragment"
+        tools:layout="@layout/fragment_register">
+
+        <action
+            android:id="@+id/action_registration_to_login"
+            app:destination="@id/loginFragment"/>
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/showsFragment"
+        android:name="com.shows_antonio_bukovac.ShowsFragment"
+        tools:layout="@layout/fragment_shows">
+
+        <action
+            android:id="@+id/action_shows_to_show_details"
+            app:destination="@id/showDetailsFragment" />
+        <action
+            android:id="@+id/action_shows_to_login"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/showDetailsFragment"
+        android:name="com.shows_antonio_bukovac.ShowDetailsFragment"
+        tools:layout="@layout/fragment_show_details">
+
+        <argument
+            android:name="showId"
+            app:argType="integer"/>
+        <action
+            android:id="@+id/action_show_details_to_shows"
+            app:destination="@id/showsFragment" />
+    </fragment>
+</navigation>

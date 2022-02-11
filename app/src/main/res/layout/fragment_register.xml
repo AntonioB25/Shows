@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3D1D72"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <TextView
+        android:id="@+id/registerTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="25dp"
+        android:text="@string/label_register"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showsTextView" />
+
+    <ImageView
+        android:id="@+id/topLeftIllustration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/top_left_illustration" />
+
+    <ImageView
+        android:id="@+id/topRightIllustration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/top_right_illustration" />
+
+    <ImageView
+        android:id="@+id/triangle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:layout_marginStart="56dp"
+        android:src="@drawable/triangle"
+        app:layout_constraintEnd_toStartOf="@+id/showsTextView"
+        app:layout_constraintTop_toTopOf="@+id/showsTextView"
+        app:layout_constraintBottom_toBottomOf="@+id/showsTextView" />
+
+    <TextView
+        android:id="@+id/showsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="176dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/label_login_title"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topLeftIllustration" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputEmailLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.InputLayout"
+
+        android:layout_marginTop="24dp"
+        app:layout_constraintBottom_toTopOf="@id/textPasswordInputLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/registerTextView">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailTextInput"
+            style="@style/EmailAndPasswordInputEditText"
+            android:hint="@string/hint_email"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textPasswordInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.InputLayout"
+        app:layout_constraintBottom_toTopOf="@+id/repeatTextPasswordInputLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputEmailLayout"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@android:color/white">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordTextInput"
+            style="@style/EmailAndPasswordInputEditText"
+            android:hint="@string/hint_password"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/repeatTextPasswordInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.InputLayout"
+        android:layout_marginBottom="56dp"
+        app:layout_constraintBottom_toTopOf="@+id/registerButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textPasswordInputLayout"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@android:color/white">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/repeatPasswordTextInput"
+            style="@style/EmailAndPasswordInputEditText"
+            android:hint="@string/hint_repeat_password"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/registerButton"
+        style="@style/LoginRegistrationButtonStyle"
+        android:text="@string/label_register"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
